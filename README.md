@@ -5,7 +5,7 @@ Since colleges and schools are opening for the fall semester, many students have
 Data is picked up from the tweets for [Rensselaer county executive](https://twitter.com/RenscoExecutive)
 
 ## How to add data?
-1. add the number of new cases to `cases.dat`, add zeros if no new cases
+1. add the number of new cases and tweet URL to `cases.csv`, add zeros if no new cases
 2. Run the Python script `plots.py`
 3. Embed the relevant tweets to `index.html` in chronological order
 4. Open the `index.html` in a browser to verify
