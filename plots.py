@@ -1,3 +1,4 @@
+# Python script to plot new cases and cumulative cases
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -16,4 +17,12 @@ ax.plot(df['date'], np.cumsum(df['new-cases']), 'tomato', marker='o')
 ax.set_ylabel('Cumulative', color='tomato')
 ax.tick_params(colors='tomato')
 ax.tick_params(colors='tomato')
+
+# automatically adjust tick labels
+Ndates = len(df['date'])
+showNdates = 10
+labels = np.array(df['date'])[::Ndates//showNdates]
+ax.set_xticks(labels)
+
 plt.savefig('cases.png', dpi=300, bbox_inches='tight')
+
