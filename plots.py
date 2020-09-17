@@ -6,6 +6,8 @@ import seaborn as sns
 
 df = pd.read_csv('cases.csv')
 
+print('Total cases:', df['new-cases'].sum())
+
 plt.figure(figsize=(10,3))
 sns.barplot('date', 'new-cases', data=df, color='royalblue', alpha=0.5)
 plt.xlabel('Date')
